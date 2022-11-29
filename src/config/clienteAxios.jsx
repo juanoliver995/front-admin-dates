@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const clientAxios = axios.create({
-    baseURL: `${import.meta.env.VITE_BACKEND_URL}/api`
+    baseURL: "https://back-admin-dates-production.up.railway.app/api"
 })
 
 export default clientAxios

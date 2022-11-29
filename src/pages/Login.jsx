@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Alert from "../components/Alert"
 import clienteAxios from "../config/clienteAxios"
@@ -36,6 +36,13 @@ const Login = () => {
             })
         }
     }
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        if (token) {
+            navigate("/dates")
+        }
+    }, [])
 
     const { msg } = alert
     return (
