@@ -151,7 +151,7 @@ const FormDate = ({ date }) => {
                     id='country'
                     type="text"
                     className='w-full mt-2 mb-2 border-2'
-                    placeholder='Country o City'
+                    placeholder='Country or City'
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                 />
