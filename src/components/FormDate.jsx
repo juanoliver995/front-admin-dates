@@ -146,12 +146,12 @@ const FormDate = ({ date }) => {
             <div>
                 <label className='uppercase text-gray-700'
                     htmlFor='country'
-                >Country</label>
+                >Country or City</label>
                 <input
                     id='country'
                     type="text"
                     className='w-full mt-2 mb-2 border-2'
-                    placeholder='Country'
+                    placeholder='Country o City'
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                 />
