@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom'
 import AuthLayout from './layouts/AuthLayout'
 import Login from './pages/Login'
 import { AuthProvider } from './context/AuthProvider'
@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <DatesProvider>
           <Routes>
@@ -29,7 +29,7 @@ function App() {
           </Routes>
         </DatesProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
