@@ -9,7 +9,6 @@ const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState({})
     const [loading, setLoading] = useState(true)
 
-    const navigate = useNavigate()
 
     useEffect(() => {
         const authUser = async () => {
@@ -32,9 +31,9 @@ const AuthProvider = ({ children }) => {
             } catch (error) {
                 setAuth({})
 
+            } finally {
+                setLoading(false)
             }
-
-            setLoading(false)
 
         }
         authUser()

@@ -32,6 +32,8 @@ const DatesProvider = ({ children }) => {
 
             } catch (error) {
                 console.log(error)
+            } finally {
+                loading(false)
             }
         }
 
@@ -79,6 +81,8 @@ const DatesProvider = ({ children }) => {
             }, 3000)
         } catch (error) {
             console.log(error)
+        } finally {
+            loading(false)
         }
     }
 
@@ -105,6 +109,8 @@ const DatesProvider = ({ children }) => {
             }, 3000)
         } catch (error) {
             console.log(error)
+        } finally {
+            loading(false)
         }
     }
 
@@ -124,6 +130,8 @@ const DatesProvider = ({ children }) => {
             setLoading(false)
         } catch (error) {
             console.log(error)
+        } finally {
+            loading(false)
         }
     }
 
@@ -152,6 +160,8 @@ const DatesProvider = ({ children }) => {
             }, 3000)
         } catch (error) {
             console.log(error)
+        } finally {
+            loading(false)
         }
     }
 

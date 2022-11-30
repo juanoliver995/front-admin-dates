@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import Alert from "./Alert"
 import useDates from "../hooks/useDates"
 import { useParams } from "react-router-dom"
-
+import Loader from "./Loader"
 
 const FormDate = ({ date }) => {
     const [id, setId] = useState(null)
@@ -14,7 +14,7 @@ const FormDate = ({ date }) => {
     const [club, setClub] = useState('')
     const [urlTickets, setUrlTickets] = useState('')
 
-    const { showAlert, alert, submitDate, } = useDates()
+    const { showAlert, alert, submitDate, loading } = useDates()
     const params = useParams()
 
     useEffect(() => {
@@ -133,12 +133,12 @@ const FormDate = ({ date }) => {
             <div>
                 <label className='uppercase text-gray-700'
                     htmlFor='province'
-                >Province</label>
+                >Province or City</label>
                 <input
                     id='province'
                     type="text"
                     className='w-full mt-2 mb-2 border-2'
-                    placeholder='Province'
+                    placeholder='Province or City'
                     value={province}
                     onChange={(e) => setProvince(e.target.value)}
                 />
@@ -146,12 +146,12 @@ const FormDate = ({ date }) => {
             <div>
                 <label className='uppercase text-gray-700'
                     htmlFor='country'
-                >Country or City</label>
+                >Country</label>
                 <input
                     id='country'
                     type="text"
                     className='w-full mt-2 mb-2 border-2'
-                    placeholder='Country or City'
+                    placeholder='Country'
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                 />

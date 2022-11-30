@@ -37,14 +37,9 @@ const Login = () => {
         }
     }
 
-    useEffect(() => {
-        const token = localStorage.getItem("token")
-        if (token) {
-            navigate("/dates")
-        }
-    }, [])
-
     const { msg } = alert
+
+
     return (
         <>
             <h1 className=" text-sky-600 font-black text-5xl capitalize text-center">log in and manage your <span className="text-slate-700">dates</span></h1>

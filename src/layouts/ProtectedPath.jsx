@@ -5,8 +5,9 @@ import SideBar from "../components/SideBar"
 
 const ProtectedPath = () => {
 
-    const { auth, loading } = useAuth()
-    if (loading) return "cargando..."
+    const { auth } = useAuth()
+
+
     return (
         <>
             {

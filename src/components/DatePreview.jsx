@@ -15,6 +15,7 @@ const DatePreview = ({ date }) => {
             </div>
             <div className="flex flex-col md:w-full items-center md:items-end gap-1">
                 <Link to={`edit-date/${_id}`} className="bg-sky-600 px-2 py-1 text-black font-bold rounded hover:bg-sky-700 transition-colors">Edit Date</Link>
+
             </div>
         </div>
     )

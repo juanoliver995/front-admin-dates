@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import useDates from "../hooks/useDates"
 import { useEffect } from "react"
 import FormDate from "../components/FormDate"
+import Loader from "../components/Loader"
 const EditDate = () => {
     const params = useParams()
     const { getDate, date, loading, deleteDate } = useDates()
@@ -17,7 +18,6 @@ const EditDate = () => {
         }
     }
 
-    if (loading) return "loading..."
 
     return (
         <>
