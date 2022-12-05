@@ -8,7 +8,7 @@ const AuthProvider = ({ children }) => {
 
     const [auth, setAuth] = useState({})
     const [loading, setLoading] = useState(true)
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         const authUser = async () => {
@@ -28,6 +28,7 @@ const AuthProvider = ({ children }) => {
             try {
                 const { data } = await clientAxios('/users/profile', config)
                 setAuth(data)
+                navigate("/dates")
             } catch (error) {
                 setAuth({})
 
