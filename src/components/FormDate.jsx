@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import Alert from "./Alert"
 import useDates from "../hooks/useDates"
 import { useParams } from "react-router-dom"
-import Loader from "./Loader"
 
 const FormDate = ({ date }) => {
     const [id, setId] = useState(null)
@@ -84,6 +83,7 @@ const FormDate = ({ date }) => {
                     <option value="08">08</option>
                     <option value="09">09</option>
                     <option value="10">10</option>
+                    <option value="11">11</option>
                     <option value="12">12</option>
                     <option value="13">13</option>
                     <option value="14">14</option>
